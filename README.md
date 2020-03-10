@@ -81,8 +81,8 @@ This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 
 [OpenCV]: https://opencv.org/
 [Doxygen]: http://www.stack.nl/~dimitri/doxygen/
 [boost]: http://www.boost.org/
-[libpleno]: http://gitlab.ip.uca.fr/mla-dev/libpleno
-[COMPOTE]: http://gitlab.ip.uca.fr/mla-dev/compote
+[libpleno]: https://github.com/comsee-research/libpleno
+[COMPOTE]: https://github.com/comsee-research/compote
 
 
 ---
