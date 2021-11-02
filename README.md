@@ -116,20 +116,66 @@ We use a `9 x 5` of `26.25 mm` side checkerboard.
 All images has been generated using the [libpleno] and our raytracing simulator [PRISM].
 
 
+Dataset R12-E, ES, ELP20
+===============
+
+Datasets containing ground truth data on 3D complex real-world scene acquired with a 3D lidar scanner Leica ScanStation P20 (LP20).
+
+### Download link
+
+**Incoming**
+
+### Experimental setup 
+
+For our experiments we used a _Raytrix R12_ color 3D-light-field-camera, with a MLA of F/2.4 aperture.
+The camera is in Galilean internal configuration.
+The mounted lens is a _Nikon AF Nikkor F/1.8D_ with a `50 mm` focal length.
+The MLA organization is hexagonal row-aligned, and composed of `176 x 152` (width x height) micro-lenses with `I = 3` different types.
+The sensor is a _Basler beA4000-62KC_ with a pixel size of `s = 0.0055 mm`.
+The raw image resolution is `4080 x 3068 pixel`.
+
+All images have been acquired using the _MultiCamStudio_ free software (v6.15.1.3573) of the [Euresys](https://www.euresys.com/en/Homepage) company.
+We set the shutter speed to `5 ms`.
+
+**3D scenes setup.** We use a 3D lidar scanner, a _Leica ScanStation P20 (LP20)_, that allows us to capture a color point cloud with high precision that can be used as ground truth data. 
+The _LP20_ is configured with no HDR and with a resolution of 1.6 mm @ 10 m.
+
+### Datasets
+
+The configuration corresponds to a focus distance `h = 2133 mm`.
+We built a calibration dataset, using a `6 x 4` of `30 mm` side checkerboard, which is composed of:
+
+- white raw plenoptic images acquired at different apertures (`N in {2.8, 4, 5.66, 8, 11.31, 16}`) using a light diffuser mounted on the main objective for pre-calibration,
+- free-hand calibration target images acquired at various poses (in distance and orientation) for the calibration process (31 images),
+- a white raw plenoptic image acquired in the same luminosity condition and with the same aperture as in the calibration targets acquisition for devignetting.
+
+With this configuration, we created two sub-datasets:
+- a simulated dataset built upon our own simulator [PRISM] based on raytracing to generate images (with `1500 rays/pixel`) with known absolute position for quantitative evaluation, named **R12-ES** (15 images, from `500 mm` to `1900 mm` with a step of `100 mm`);
+- a dataset composed of several 3D scenes with ground truth acquired with the _LP20_, for object distances ranging from `400 mm` to `1500 mm`.
+
+The latter dataset, named **R12-ELP20**, includes fives scenes: 
+
+- one scene for extrinsic parameters calibration, containing checker corner targets, named _Calib_;
+- two scenes containing textured planar objects, named _Plane-1_ and _Plane-2_;
+- and two more complex scenes containing various figurines, named _Figurines-1_ and _Figurines-2_.
+
+Each scene is composed of: a colored point cloud (with spatial (x,y,z) information, color information (r,g,b), and intensity information) in format `.ptx`, `.pts` and `.xyz`; 3D positions of the targets in the lidar reference frame; two raw plenoptic images in _rgb_ color and two raw plenoptic images in bayer; finally, photos and labels of the scene.
+
 Applications
 ============
 
 For instance, the datasets can be used with the following applications :
- * [COMPOTE] (Calibration Of Multi-focus PlenOpTic camEra), a collection of tools to pre-calibrate and calibrate a multifocus plenoptic camera.
- * [PRISM] (Plenoptic Raw Image Simulator), a collection of tools to generate and simulate raw images from a multifocus plenoptic camera.
- * [BLADE] (BLur Aware Depth Estimation with a multifocus plenoptic camera), a collection of tools to estimate depth map and generate point clouds from raw images obtained by a multifocus plenoptic camera.
- * [libpleno], an open-souce C++ library for plenoptic camera.
+ * [COMPOTE] (Calibration Of Multi-focus PlenOpTic camEra), a collection of tools to pre-calibrate and calibrate (multifocus) plenoptic cameras.
+ * [PRISM] (Plenoptic Raw Image Simulator), a collection of tools to generate and simulate raw images from (multifocus) plenoptic cameras.
+ * [BLADE] (BLur Aware Depth Estimation with a plenoptic camera), a collection of tools to estimate depth map from raw images obtained by (multifocus) plenoptic cameras.
+
+Based on the [libpleno], an open-source C++ computer-vision library for plenoptic cameras modeling and processing.
 
 
 Citing
 ======
 
-If you use our datasets, the [libpleno] or the [COMPOTE] tools in an academic context, please cite the following publication:
+If you use our datasets, the [libpleno], the [COMPOTE] tools, the [PRISM] tools or the [BLADE] tools in an academic context, please cite the following publication:
 
 	@inproceedings{Labussiere2020,
 		author = {Labussi{\`{e}}re, Mathieu and Teuli{\`{e}}re, C{\'{e}}line and Bernardin, Fr{\'{e}}d{\'{e}}ric and Ait-Aider, Omar},
