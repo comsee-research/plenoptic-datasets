@@ -7,7 +7,7 @@ Datasets R12-ABC
 
 ### Download link
 
-The datasets can be downloaded [here](https://drive.uca.fr/f/d3a73cb1926047a8b635/?dl=1).
+The datasets can be downloaded [here](https://drive.uca.fr/f/2cea45f26455407497f3/?dl=1).
 
 ### Experimental setup
 
@@ -52,7 +52,7 @@ Dataset R12-D
 
 ### Download link
 
-The dataset can be downloaded [here](https://drive.uca.fr/f/bde8b32c892243ff95c4/?dl=1).
+The dataset can be downloaded [here](https://drive.uca.fr/f/5da7e8cc5d22467989e0/?dl=1).
 
 ### Experimental setup
 
@@ -90,7 +90,7 @@ Simulated dataset for Lytro-like plenoptic camera configuration, i.e., _unfocuse
 
 ### Download link
 
-The dataset can be downloaded [here](https://drive.uca.fr/f/c617039b1dd14ad78e84/?dl=1).
+The dataset can be downloaded [here](https://drive.uca.fr/f/d765fe50325140baab86/?dl=1).
 
 ### Experimental setup
 
@@ -123,7 +123,7 @@ Datasets containing ground truth data on 3D complex real-world scene acquired wi
 
 ### Download link
 
-**Incoming**
+The datasets can be downloaded [here](https://drive.uca.fr/f/f164345e148642b881c3/?dl=1).
 
 ### Experimental setup 
 
@@ -161,6 +161,7 @@ The latter dataset, named **R12-ELP20**, includes fives scenes:
 
 Each scene is composed of: a colored point cloud (with spatial (x,y,z) information, color information (r,g,b), and intensity information) in format `.ptx`, `.pts` and `.xyz`; 3D positions of the targets in the lidar reference frame; two raw plenoptic images in _rgb_ color and two raw plenoptic images in bayer; finally, photos and labels of the scene.
 
+
 Applications
 ============
 
@@ -177,13 +178,22 @@ Citing
 
 If you use our datasets, the [libpleno], the [COMPOTE] tools, the [PRISM] tools or the [BLADE] tools in an academic context, please cite the following publication:
 
-	@inproceedings{Labussiere2020,
-		author = {Labussi{\`{e}}re, Mathieu and Teuli{\`{e}}re, C{\'{e}}line and Bernardin, Fr{\'{e}}d{\'{e}}ric and Ait-Aider, Omar},
-		booktitle = {2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-		title = {{Blur Aware Calibration of Multi-Focus Plenoptic Camera}},
-		year = {2020}
+	@inproceedings{labussiere2020blur,
+	  title 	=	{Blur Aware Calibration of Multi-Focus Plenoptic Camera},
+	  author	=	{Labussi{\`e}re, Mathieu and Teuli{\`e}re, C{\'e}line and Bernardin, Fr{\'e}d{\'e}ric and Ait-Aider, Omar},
+	  booktitle	=	{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+	  pages		=	{2545--2554},
+	  year		=	{2020}
 	}
+	
+or 
 
+	@article{labussiere2021calibration
+	  title	    =	{Leveraging blur information for plenoptic camera calibration},
+	  author	=	{Labussi{\`e}re, Mathieu and Teuli{\`e}re, C{\'e}line and Bernardin, Fr{\'e}d{\'e}ric and Ait-Aider, Omar},
+	  journal	=	{arXiv preprint arXiv:2111.05226},
+	  year		=	{2021}
+	}
 
 License
 =======
