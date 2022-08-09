@@ -7,7 +7,7 @@ Datasets R12-ABC
 
 ### Download link
 
-The datasets can be downloaded [here](https://drive.uca.fr/f/2cea45f26455407497f3/?dl=1).
+The datasets can be downloaded [here](https://plenoptic.ip.uca.fr/R12-ABC.tar.gz).
 
 ### Experimental setup
 
@@ -52,7 +52,7 @@ Dataset R12-D
 
 ### Download link
 
-The dataset can be downloaded [here](https://drive.uca.fr/f/5da7e8cc5d22467989e0/?dl=1).
+The dataset can be downloaded [here](https://plenoptic.ip.uca.fr/R12-D.tar.gz).
 
 ### Experimental setup
 
@@ -90,7 +90,7 @@ Simulated dataset for Lytro-like plenoptic camera configuration, i.e., _unfocuse
 
 ### Download link
 
-The dataset can be downloaded [here](https://drive.uca.fr/f/d765fe50325140baab86/?dl=1).
+The dataset can be downloaded [here](https://plenoptic.ip.uca.fr/UPC-S.tar.gz).
 
 ### Experimental setup
 
@@ -123,7 +123,7 @@ Datasets containing ground truth data on 3D complex real-world scene acquired wi
 
 ### Download link
 
-The datasets can be downloaded [here](https://drive.uca.fr/f/f164345e148642b881c3/?dl=1).
+The datasets can be downloaded [here](https://plenoptic.ip.uca.fr/R12-E.tar.gz).
 
 ### Experimental setup 
 
@@ -203,6 +203,8 @@ License
 =======
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). Enjoy!
+
+**Note**: if download links are broken, don't hesitate to contact me!
 
 [Ubuntu]: http://www.ubuntu.com
 [CMake]: http://www.cmake.org
